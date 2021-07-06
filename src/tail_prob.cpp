@@ -3,6 +3,23 @@
 #include <random>
 #include <vector>
 
+/*
+An Rcpp implementation of the tail_prob function.
+
+tail_prob returns the average probability of getting a tails
+after a string of heads.
+
+inputs:
+
+    sample_size = the number of times to toss the coin
+    n_samples = the number of times to take the sample
+    streak_length = the number of heads in a row
+
+
+The function returns the average probability of tails after the streak,
+weighted equally across all samples.
+*/
+
 
 using namespace Rcpp;
 

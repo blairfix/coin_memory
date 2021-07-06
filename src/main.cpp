@@ -5,7 +5,18 @@
 #include <math.h>
 #include <vector>
 
-#include "hothand.h"
+#include "tail_prob.h"
+
+/*
+This implements the tail_prob function over a
+log-spaced vector same sizes (from 10 to 1 million).
+For each sample size, the program returns the average probability of tails,
+follow a streak of heads of length streak_length. It also returns
+the standard deviation of probability across the n_samples of each
+sample size.
+
+*/
+
 
 int main(){
 
@@ -32,10 +43,10 @@ int main(){
         int sample_size =  sample_vec[j];
 
         // get vector of probabilities from trial
-        auto tmp = hot_hand(sample_size,
-                                 n_sample,
-                                 streak_length
-                                );
+        auto tmp = tail_prob(sample_size,
+                             n_sample,
+                             streak_length
+                             );
 
         // convert tmp to arma vec
         std::vector<double> tmp2{ std::make_move_iterator(std::begin(tmp)),

@@ -1,3 +1,7 @@
+# This code compiles main.h to run for 
+# different streak lengths of heads
+
+
 library(here)
 
 dir = here()

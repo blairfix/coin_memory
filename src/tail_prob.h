@@ -1,14 +1,28 @@
-//File: hothand.h
-#ifndef HOTHAND_H
-#define HOTHAND_H
+//File: tail_prob.h
+#ifndef TAIL_PROB_H
+#define TAIL_PROB_H
 
 #include <numeric>
 #include <random>
 #include <vector>
 #include <list>
 
+/*
+tail_prob returns the average probability of getting a tails
+after a string of heads.
 
-std::list<double> hot_hand ( int sample_size,
+inputs:
+
+    sample_size = the number of times to toss the coin
+    n_samples = the number of times to take the sample
+    streak_length = the number of heads in a row
+
+
+The function returns the average probability of tails after the streak,
+weighted equally across all samples.
+*/
+
+std::list<double> tail_prob (int sample_size,
                              int n_samples,
                              int streak_length )
 {
