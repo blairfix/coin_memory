@@ -9,7 +9,7 @@
 
 /*
 This implements the tail_prob function over a
-log-spaced vector same sizes (from 10 to 1 million).
+log-spaced vector of sample sizes (from 10 to 1 million).
 For each sample size, the program returns the average probability of tails,
 follow a streak of heads of length streak_length. It also returns
 the standard deviation of probability across the n_samples of each

@@ -27,9 +27,9 @@ using namespace Rcpp;
 // [[Rcpp::plugins(cpp11)]]
 // [[Rcpp::export]]
 
-std::list<double> hot_hand ( int sample_size,
+std::list<double> tail_prob (int sample_size,
                              int n_samples,
-                             int streak_length )
+                             int streak_length)
 {
 
     // probability results
